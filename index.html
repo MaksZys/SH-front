@@ -4,39 +4,59 @@
     <meta charset="utf-8" />
     <title>Zonifero</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
     <nav>
-        <div class="navbar-up">
-            <div id="navbar-up-left">
-                <img src="">
-                <span>zonifero</span>
+        <div class="menu-up">
+            <div class="menu-up__left">
+                <img src="assets/images/logo.png" alt="Zonifero logo">
             </div>
-            <div id="navbar-up-right">
-                <ul>
-                    <li>Zonifero products</li>
-                    <li>Store</li>
-                    <li>Blog</li>
-                </ul>
-                <select name="language" id="">
-                    <option value="en">English</option>
-                    <option value="pl">Polish</option>
-                </select>
-                <ul>
-                    <li>Sign in</li>
-                    <li class="blue-button">Get the app</li>
+            <div class="menu-up__right">
+                <ul class="menu-up__list">
+                    <li class="menu-up__list__list-element
+                         menu-up__list__list-element--small-font">
+                            Zonifero products
+                        </li>
+                    <li class="menu-up__list__list-element
+                        menu-up__list__list-element--small-font">
+                            Store
+                    </li>
+                    <li class="menu-up__list__list-element
+                        menu-up__list__list-element--small-font">
+                            Blog
+                    </li>
+                    <li class="menu-up__list__list-element">
+                        <select class="menu-up__select" name="language" id="">
+                            <option value="null"></option>
+                            <option value="en">English</option>
+                            <option value="pl">Polish</option>
+                        </select>
+                    </li>
+                    <li class="menu-up__list__list-element 
+                        menu-up__list__list-element--big-font">
+                            Sign in
+                    </li>
+                    <li class="menu-up__list__list-element 
+                    menu-up__list__list-element--big-font 
+                    menu-up__list__list-element--blue-button">
+                        Get the app
+                </li>
                 </ul>
             </div>
         </div>
-        <div class="navbar-down">
+        <div class="menu-down">
             <ul>
-                <li>zonifero WorkPlace</li>
-                <li class="navbar-menu-link">Overview</li>
-                <li class="navbar-menu-link">Features</li>
-                <li class="navbar-menu-link">Specs</li>
-                <li class="navbar-menu-link">FAQ</li>
-                <li class="navbar-menu-link">Contact</li>
+                <li class="menu-down__list">zonifero WorkPlace:</li>
+                <li class="menu-down__list 
+                 menu-down__list--selected-tab">
+                    Overview
+                </li>
+                <li class="menu-down__list">Features</li>
+                <li class="menu-down__list">Specs</li>
+                <li class="menu-down__list">FAQ</li>
+                <li class="menu-down__list">Contact</li>
             </ul>
         </div>
     </nav>
