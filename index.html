@@ -8,14 +8,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <nav>
+    <nav class="menu">
         <div class="menu-up">
-            <div class="menu-up__left">
+            <div class="menu-up__left menu-mobile__crop-image">
                 <img src="assets/images/logo.png" alt="Zonifero logo">
             </div>
             <div class="menu-up__right">
-                <ul class="menu-up__list">
+                <ul class="menu-up__list menu-up__list--mobile">
                     <li class="menu-up__list__list-element
+                         menu-up__list__list-element
                          menu-up__list__list-element--small-font">
                             Zonifero products
                         </li>
@@ -47,17 +48,26 @@
             </div>
         </div>
         <div class="menu-down">
-            <ul>
-                <li class="menu-down__list">zonifero WorkPlace:</li>
-                <li class="menu-down__list 
+            <span class="menu-mobile 
+                menu-mobile__text">
+                zonifero WorkPlace
+            </span>
+            <ul class="menu-down__list">
+                <li class="menu-down__list__element">zonifero WorkPlace:</li>
+                <li class="menu-down__list__element
                  menu-down__list--selected-tab">
                     Overview
                 </li>
-                <li class="menu-down__list">Features</li>
-                <li class="menu-down__list">Specs</li>
-                <li class="menu-down__list">FAQ</li>
-                <li class="menu-down__list">Contact</li>
+                <li class="menu-down__list__element">Features</li>
+                <li class="menu-down__list__element">Specs</li>
+                <li class="menu-down__list__element">FAQ</li>
+                <li class="menu-down__list__element">Contact</li>
             </ul>
+        </div>
+        <div class="menu-mobile__burger">
+            <div class="menu-mobile__burger__line"></div>
+            <div class="menu-mobile__burger__line"></div>
+            <div class="menu-mobile__burger__line"></div>
         </div>
     </nav>
     <div></div>
