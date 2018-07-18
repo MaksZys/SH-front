@@ -12,6 +12,7 @@
     grid-gap: 5px;
     overflow: hidden;
     &__title {
+        padding: 0.3em;
         grid-area: title;
         font-family: 'Poppins';
         color: $productColor;
@@ -19,13 +20,7 @@
         line-height: 80px;
         font-weight: bold;
         display: grid;
-        &__list {
-            list-style-type: none;
-            &__element {
-                list-style-type: none;
-                display: inline;
-            }
-        }
+        grid-template-rows: repeat(2, 1fr);
     }
 
     &__picture {
@@ -44,6 +39,7 @@
         line-height: 40px;
         padding: 1em;
         text-align: left;
+        padding-right: 2em;
     }
 
     &__from {

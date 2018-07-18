@@ -4,7 +4,12 @@
 // Reset browser styles 
 @import './_css_reset.scss';
 
+// mixins 
+@import './section/universal-mixins.scss';
+
 // Navbar styles
 @import './navbar/_navbar.scss';
 @import './section/_download.scss';
 @import './section/_for-whom.scss';
+@import './section/_problem.scss';
+@import './section/features.scss';

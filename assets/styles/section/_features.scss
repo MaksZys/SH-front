@@ -1,0 +1,15 @@
+.features {
+    background-color: $backgroundColor;
+    padding-top: 10em;
+    &__container {
+        background: url("/assets/images/Layer\ 78.png") no-repeat;
+        background-size: cover;
+        height: 100%;
+        &__bar {
+            
+        }
+    }
+    &__section-name {
+        @include section-name;
+    }
+}

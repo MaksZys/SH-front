@@ -1,0 +1,33 @@
+.problem {
+    background-color: $backgroundColor;
+    &__wrapper {
+        padding-top: 15em;
+        overflow: hidden;
+        &__container {
+            width: 70%;
+            padding-left: 16em;
+            display: inline-flex;
+        }
+        &__section-name{
+            @include section-name;
+        }
+    }
+}
+
+.problem-container {
+    &__column {
+        background-color: $white;
+        padding: 60px;
+        display: grid;
+        margin: 1em;
+        &__image {
+            margin: 0 auto;
+        }
+        &__title {
+
+        }
+        &__text {
+
+        }
+    }
+}
