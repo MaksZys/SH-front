@@ -92,7 +92,7 @@
     display: none;
 }
 
-@media (max-width: 830px) {
+@media (max-width: $query-mobile) {
     .menu {
         display: inline-flex;
         width: 100%;

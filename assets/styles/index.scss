@@ -1,10 +1,10 @@
+@import './settings.scss';
+// All page colors
+@import './_colors.scss';
 // Reset browser styles 
 @import './_css_reset.scss';
 
-// All page colors
-@import './_colors.scss';
-
 // Navbar styles
 @import './navbar/_navbar.scss';
-
-@import './settings.scss'
+@import './section/_download.scss';
+@import './section/_for-whom.scss';
