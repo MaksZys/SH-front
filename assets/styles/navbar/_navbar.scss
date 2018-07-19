@@ -1,6 +1,6 @@
 .menu {
     display: block;
-    min-width: 320px;
+    min-width: 340px;
 }
 
 .menu-up {
@@ -43,19 +43,39 @@
             &--big-font {
                 font-size: 17px;
             }
-            &--blue-button {
-                margin-top: -1em;
-                color: $white;
-                background-color: $productColor;
-                justify-content: center;
-                align-items: center;
+            &--big-btn-shape {
+                padding: 47px 78px 20px 115px;
+            }
+            &--small-btn-shape {
+                padding: 47px 35px 20px 35px;
+            }
+            &--btn-position {
                 position: relative;
-                top: 0;
-                right: 0;
-                width: 10em;
-                height: 100%;
-                display: flex;
-                padding: 1em 1.5em 0 0;
+                right: 4rem;
+            }
+            &--blue {
+                background-color: $productColor;
+            }
+            &--del-decorations {
+                text-decoration: none;
+                color: black;
+            }
+            &--del-decorations-white {
+                text-decoration: none;
+                color: $white;
+            }
+            &--add-arrow {
+                // margin: 0 2rem 0 1rem;
+                &:after {
+                    font-family: 'FontAwesome';
+                    content: '\f107';
+                }
+            }
+            &--additional-margin {
+                margin: 0 0rem 0 4rem;
+            }
+            &--delete-margin {
+                margin: 0;
             }
         }        
         &--mobile {

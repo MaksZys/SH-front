@@ -7,12 +7,11 @@
     ". title picture"
     ". . picture"
     ". text picture"
-    ". text picture"
-    ". from .";
+    ". from picture"
+    ". . .";
     grid-gap: 5px;
     overflow: hidden;
     &__title {
-        padding: 0.3em;
         grid-area: title;
         font-family: 'Poppins';
         color: $productColor;
@@ -39,7 +38,7 @@
         grid-area: text;
         font-size: 30px;
         line-height: 40px;
-        padding: 0.5rem 1rem 2rem 1rem;
+        // padding: 0.5rem 5rem 2rem 1rem;
         text-align: left;
     }
 
@@ -47,6 +46,7 @@
         grid-area: from;
         display: inline-flex;
         justify-content: left;
+        align-self: flex-end;
         &__canvas {
             margin: 1rem;
             &__picture {
@@ -55,6 +55,17 @@
     }
 
 }
+
+// @media (max-width: $query-small-desktop) {
+//     .download {
+//             grid-template-areas: ". . ."
+//     ". title picture"
+//     ". . picture"
+//     ". text picture"
+//     ". text picture"
+//     ". from .";
+//     }
+// }
 
 @media (max-width: $query-mobile) {
     .download {

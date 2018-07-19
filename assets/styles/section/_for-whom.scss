@@ -2,7 +2,7 @@
     background-color: $backgroundColor;
     width: 100%;
     &__wrapper {
-        margin-left: 17%;
+        margin-left: 12%;
         width: 70%;
         display: flex;
         flex-wrap: wrap;
@@ -35,6 +35,12 @@
             padding-top: 3rem;
             &__column {
                 display: none;
+                &__title, &__description {
+                    padding: 0 1.4rem 0 1.4rem;
+                }
+                // &__description {
+                //     padding: 3rem;
+                // }
                 &--selected {
                     display: grid;
                     grid-template-rows: repeat(2, 1fr);
