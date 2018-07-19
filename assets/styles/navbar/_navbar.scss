@@ -77,9 +77,18 @@
             font-size: 19px;
             line-height: 27px;
             margin: 0.5em 1.4em 0 1.4em;   
-            &--selected-tab {
-                font-weight: bold;
-                border-bottom: 2px solid $secondaryColor;
+            &--selected {
+                text-decoration: none;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    height: 3px;
+                    bottom: -4px;
+                    background: $secondaryColor;
+                    left: 0;
+                    width: 40%;
+                }
             }
         }
     }

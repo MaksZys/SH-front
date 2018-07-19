@@ -7,7 +7,7 @@
     ". title picture"
     ". . picture"
     ". text picture"
-    ". text ."
+    ". text picture"
     ". from .";
     grid-gap: 5px;
     overflow: hidden;
@@ -26,7 +26,7 @@
     &__picture {
         grid-area: picture;
         background: url("/assets/images/desks.png") no-repeat;
-        background-size: 100% 100%;
+        background-size: inherit;
         &__image {
             position: relative;
             right: -12%;
@@ -56,8 +56,35 @@
 @media (max-width: $query-mobile) {
     .download {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: auto 60vw auto auto;
         grid-template-areas: "title" "picture" "text" "from";
+
+        &__title {
+            grid-template-rows: repeat(2, auto);
+            font-size: 11vw;
+        }
+
+        &__picture{
+            overflow: hidden;
+            background-position: center center;
+            background-size: contain;
+            &__image {
+                width: auto;
+                height: 134%;
+                right: -15%;
+                bottom: 4%;
+            }
+        }
+
+        &__from {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &__image {
+                margin: 1rem;
+            }
+        }
     }
 }
-

@@ -12,6 +12,9 @@
             @include section-name;
         }
     }
+    &__dots-wrapper {
+        display: none;
+    }
 }
 
 .problem-container {
@@ -28,6 +31,49 @@
         }
         &__text {
 
+        }
+    }
+}
+
+@media (max-width: $query-mobile) {
+    .problem {
+        &__wrapper {
+            padding-top: 3rem;
+            &__container {
+                background-color: $white;
+                width: 100%;
+                padding-left: 0; 
+            }
+            &__section-name {
+                @include mobile-section-name;
+            }
+        }
+        &__dots-wrapper {
+            @include dots-center-wrapper;
+            background-color: $white;
+            margin-bottom: 1rem;
+            &__dot{
+                @include dots;
+            }
+        }
+    }
+
+    .problem-container {
+        &__column {
+            width: 100%;
+            display: none;
+            &--selected {
+                display: grid;
+            }  
+            &__image {
+
+            }
+            &__title {
+
+            }
+            &__text {
+
+            }
         }
     }
 }
