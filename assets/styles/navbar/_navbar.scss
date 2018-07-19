@@ -77,19 +77,37 @@
             font-size: 19px;
             line-height: 27px;
             margin: 0.5em 1.4em 0 1.4em;   
-            &--selected {
+            &:after{
+                position: absolute;
+                content: '';
+                height: 3px;
+                bottom: -4px;
+                background: $secondaryColor;
+                left: 0;
+                width: 0;
+                display: block;
+                transition: width 0.2s ease-in-out;
+            }
+            &:hover, &--selected {
                 text-decoration: none;
                 position: relative;
-                &:after{
-                    position: absolute;
-                    content: '';
-                    height: 3px;
-                    bottom: -4px;
-                    background: $secondaryColor;
-                    left: 0;
+                font-weight: bold;
+                cursor: pointer;
+                &:after {
                     width: 40%;
                 }
             }
+            &:hover{ &:after {
+                    width: 100%;
+                }
+            }
+        }
+        &__title {
+            display: inline-flex;
+            list-style: none;
+            font-size: 19px;
+            line-height: 27px;
+            margin: 0.5em 1.4em 0 1.4em;  
         }
     }
     &--mobile {
@@ -129,6 +147,9 @@
             &__element{
                 margin: 0;
                 padding: 0;
+                display: none;
+            }
+            &__title {
                 display: none;
             }
         }

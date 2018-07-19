@@ -1,6 +1,13 @@
 .features {
     background-color: $backgroundColor;
     padding-top: 10em;
+    position: relative;
+    &__section-name {
+        @include section-name;
+    }
+    &__canvas {
+        
+    }
     &__container {
         background: url("/assets/images/Layer\ 78.png") no-repeat;
         background-size: cover;
@@ -8,8 +15,5 @@
         &__bar {
             
         }
-    }
-    &__section-name {
-        @include section-name;
     }
 }
