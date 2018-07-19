@@ -92,6 +92,12 @@ module.exports = {
                 options: {
                     name: '[path][name].[ext]'
                 }
+            },
+
+            // URL Resolver 
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'resolve-url-loader'
             }
         ]
     }
