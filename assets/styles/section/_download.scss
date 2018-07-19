@@ -2,13 +2,18 @@
     background-color: $backgroundColor;
     display: grid;
     grid-template-columns: 15% 40% 45%;
-    grid-template-rows: repeat(6, 8em);
-    grid-template-areas: ". . ."
-    ". title picture"
-    ". . picture"
-    ". text picture"
-    ". from picture"
-    ". . .";
+    grid-template-rows: repeat(8, 5rem) repeat(4, 3rem);
+    grid-template-areas: 
+        ". . ."
+        ". . ."
+        ". . picture"
+        ". title picture"
+        ". title picture"
+        ". . picture"
+        ". text picture"
+        ". text picture"
+        ". . picture"
+        ". from picture";
     grid-gap: 5px;
     overflow: hidden;
     &__title {
@@ -56,26 +61,17 @@
 
 }
 
-// @media (max-width: $query-small-desktop) {
-//     .download {
-//             grid-template-areas: ". . ."
-//     ". title picture"
-//     ". . picture"
-//     ". text picture"
-//     ". text picture"
-//     ". from .";
-//     }
-// }
-
 @media (max-width: $query-mobile) {
     .download {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 60vw auto auto;
+        grid-template-rows: 35% 60vw auto auto;
         grid-template-areas: "title" "picture" "text" "from";
 
         &__title {
             grid-template-rows: repeat(2, auto);
-            font-size: 11vw;
+            font-size: 11.5vw;
+            line-height: 100%;
+            padding: 0 1% 0 3%;
         }
 
         &__picture{

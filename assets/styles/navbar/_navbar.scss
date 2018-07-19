@@ -45,9 +45,11 @@
             }
             &--big-btn-shape {
                 padding: 47px 78px 20px 115px;
+                white-space: nowrap;
             }
             &--small-btn-shape {
                 padding: 47px 35px 20px 35px;
+                white-space: nowrap;
             }
             &--btn-position {
                 position: relative;
@@ -64,19 +66,13 @@
                 text-decoration: none;
                 color: $white;
             }
-            &--add-arrow {
-                // margin: 0 2rem 0 1rem;
-                &:after {
-                    font-family: 'FontAwesome';
-                    content: '\f107';
-                }
-            }
             &--additional-margin {
                 margin: 0 0rem 0 4rem;
             }
             &--delete-margin {
                 margin: 0;
             }
+            @include add-arrow;
         }        
         &--mobile {
             display: flex;
@@ -201,6 +197,7 @@
         &__text {
             height: 2em;
             margin: 0.3em 0 0 1em;
+            @include add-arrow;
         }
     }
 }

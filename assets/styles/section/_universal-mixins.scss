@@ -25,3 +25,13 @@
         background-color: $productColor;
     }
 }
+
+@mixin add-arrow {
+    &--add-arrow {
+        &:after {
+            margin-left: 1rem;
+            font-family: 'FontAwesome';
+            content: '\f107';
+        }
+    }
+}
