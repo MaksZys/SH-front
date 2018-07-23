@@ -75,6 +75,7 @@ module.exports = {
                             sourceMap: IS_DEV
                         }
                     },
+                    'resolve-url-loader',
                     {
                         loader: 'sass-loader',
                         options: {
@@ -93,12 +94,6 @@ module.exports = {
                     name: '[path][name].[ext]'
                 }
             },
-
-            // URL Resolver 
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'resolve-url-loader'
-            }
         ]
     }
 };

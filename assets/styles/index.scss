@@ -9,7 +9,15 @@
 
 // Navbar styles
 @import './navbar/_navbar.scss';
+
+// Sections styles 
 @import './section/_download.scss';
 @import './section/_for-whom.scss';
 @import './section/_problem.scss';
-@import './section/features.scss';
+@import './section/_features.scss';
+@import './section/_booking.scss';
+@import './section/_advertising.scss';
+
+// Footer styles
+@import './footer/_footer.scss';
+
