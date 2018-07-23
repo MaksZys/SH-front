@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolveUrlLoader = require('resolve-url-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -37,6 +38,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.html'),
             title: appHtmlTitle
+        }),
+
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
         })
     ],
     module: {
@@ -70,6 +76,12 @@ module.exports = {
                 test: /\.scss/,
                 use: [
                     'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
                     {
                         loader: 'css-loader',
                         options: {

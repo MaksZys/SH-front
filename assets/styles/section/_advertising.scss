@@ -1,0 +1,146 @@
+.ad {
+    position: relative;
+    background: url('./assets/images/Layer\ 59.png') no-repeat;
+    background-position-x: 83%;
+    background-position-y: 10%;
+    width: 100%;
+    min-height: 65rem;
+    
+    &__text {
+        position: relative;
+        display: grid;
+        width: 42%;
+        position: relative;
+        top: 15rem;
+        left: 20%;
+
+        &__title {
+            font-size: 55px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            width: 75%;
+            line-height: 86px;
+
+        }
+
+        &__description {
+            margin-top: 4rem;
+            font-size: 30px;
+        }
+    }
+
+    &__mobile-image {
+        display: none;
+    }
+
+    &__description {
+        display: inline-flex;
+        flex-wrap: wrap;
+        margin: 2rem;
+        position: relative;
+        top: 19rem;
+        left: 18%;
+        padding-bottom: 20rem;
+        width: 78%;
+
+        &__container {
+            width: 33rem;
+            display: grid;
+            grid-gap: 1rem;
+            margin-right: 4rem;
+
+            &__title {
+                font-weight: bold;
+                width: 55%;
+                font-size: 21px;
+            }
+
+            &__text{
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+        }
+
+    }
+}
+
+@media(max-width: $query-mobile) {
+    .ad {
+        background: none;
+        margin-top: 10rem;
+        min-height: 0;
+
+        &__text {
+            position: relative;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            &__title {
+                width: 68%;
+                margin-left: 1.5rem;
+                line-height: 55px;
+                font-size: 35px;
+            }
+
+            &__description {
+                width: auto;
+                font-size: 22px;
+                margin: 3rem 1rem 0 
+            }
+        }
+
+        &__mobile-image {
+            display: block;
+            background: url('./assets/images/Layer\ 59.png') no-repeat;
+            background-position-x: 50%;
+            background-position-y: 3rem;
+            width: 100%;
+            min-height: 25rem;
+            height: 100%;
+            background-size: contain;
+        }
+
+        &__description {
+            display: inline-flex;
+            margin: 0;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            padding-bottom: 0;
+
+            &__container {
+                position: relative;
+                top: 0;
+                width: auto;
+                margin: 1rem 1rem 4rem 1rem;
+
+                &__title {
+                    font-weight: bold;
+                    width: 100%;
+                    font-size: 21px;
+
+                    &--del-margin {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &__text{
+                    font-weight: 300;
+
+                    &--del-margin {
+                        margin-top: 0;
+                    }
+                }
+    
+                &--hide-mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
