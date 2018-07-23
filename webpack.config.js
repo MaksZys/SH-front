@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const resolveUrlLoader = require('resolve-url-loader');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -72,14 +73,14 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: IS_DEV
+                            sourceMap: IS_DEV,
                         }
                     },
                     'resolve-url-loader',
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: IS_DEV,
+                            sourceMap: true,
                             includePaths: [dirAssets]
                         }
                     }
@@ -94,6 +95,18 @@ module.exports = {
                     name: '[path][name].[ext]'
                 }
             },
+
+            // HTML 
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: [':data-src']
+                    }
+                }
+            }
+
         ]
     }
 };
