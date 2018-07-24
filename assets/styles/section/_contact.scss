@@ -1,16 +1,171 @@
 .contact {
     display: flex;
     justify-content: center;
+    width: 100%;
 
     &__wrapper {
+        display: grid;
+        justify-content: center;
+        width: 80%;
 
-
-        &__tab {
+        &__tabs {
             display: inline-flex;
+            margin-left: 3rem;
+            margin-bottom: 4rem;
+            margin-left: 38%;
+            
+            &__link {
+                text-decoration: none;
+                color: black;
+                margin-right: 3.5rem;
+                font-size: 18px;
+
+                &:after{
+                    position: absolute;
+                    content: '';
+                    height: 3px;
+                    bottom: -4px;
+                    background: $secondaryColor;
+                    left: 0;
+                    width: 0;
+                    display: block;
+                    transition: width 0.2s ease-in-out;
+                }
+
+                &:hover, &--selected {
+                    text-decoration: none;
+                    position: relative;
+                    font-weight: bold;
+                    cursor: pointer;
+                    &:after {
+                        width: 40%;
+                    }
+                }
+
+                &:hover{ &:after {
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         &__form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            grid-gap: 6.5rem;
+            grid-template-areas: 
+                "first family"
+                "phone email"
+                "message message";
+
+            &__description {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 26px;
+            }
+
+            &__element {
+                border: none;
+                width: 100%;
+                background-color: $white;
+                border-bottom: 2px dotted #2A2A2A;
+                font-size: 30px;
+                line-height: 65px;
+
+                &__area {
+                    resize: none;
+                    height: auto;
+                    max-height: 4rem; 
+                }
+            }
+
+            &__first {
+                grid-area: first;
+            }
             
+            &__family {
+                grid-area: family;
+            }
+            
+            &__phone {
+                grid-area: phone;
+                
+            }
+            
+            &__email {
+                grid-area: email;
+            }
+            
+            &__message {
+                grid-area: message;
+            }
+
+            &--check {
+                &:after {
+                    font-family: 'FontAwesome';
+                    content: '\f00c';
+                    position: relative;
+                    left: 95%;
+                    bottom: 30%;
+
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: $query-mobile) {
+    .contact {
+        justify-content: left;
+
+        &__wrapper {
+            width: 100%;
+            margin: 0 5% 0 5%;
+            justify-content: left;
+
+            &__tabs {
+                margin-left: 0;
+
+                &__link {
+                    margin-right: 3rem;
+                }
+            }
+        
+            &__form {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, auto);
+                grid-gap: 3rem;
+                grid-template-areas: 
+                    "first"
+                    "family"
+                    "phone"
+                    "email"
+                    "message"
+                    "message";
+
+                &__element {
+                    border: none;
+                    width: 100%;
+                    background-color: $white;
+                    border-bottom: 2px dotted #2A2A2A;
+                    font-size: 27px;
+                    line-height: 65px;
+
+                    &__area {
+                        resize: none;
+                        height: auto;
+                        min-height: 12rem;
+                        max-height: none; 
+                    }
+                }
+
+                &--check {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const resolveUrlLoader = require('resolve-url-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const htmlLoader = require('html-loader');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -75,9 +76,9 @@ module.exports = {
             {
                 test: /\.scss/,
                 use: [
-                    'style-loader',
-                    {
-                        loader: MiniCssExtractPlugin.loader,
+                    (IS_DEV == 'dev') ? 
+                    'style-loader' : 
+                    { loader: MiniCssExtractPlugin.loader,
                         options: {
                             publicPath: '../'
                         }
@@ -110,11 +111,11 @@ module.exports = {
 
             // HTML 
             {
-                test: /\.(html)$/,
+                test: /\.html$/,
                 use: {
                     loader: 'html-loader',
                     options: {
-                        attrs: [':data-src']
+                        minimize: true
                     }
                 }
             }
