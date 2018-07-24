@@ -108,8 +108,21 @@
                     position: relative;
                     left: 95%;
                     bottom: 30%;
-
                 }
+            }
+        }
+        &__send {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+
+            &__button {
+                width: 12rem;
+                height: 4rem;
+                background-color: $productColor;
+                color: $white;
+                font-size: 17px;
             }
         }
     }
