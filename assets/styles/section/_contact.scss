@@ -37,12 +37,15 @@
                     position: relative;
                     font-weight: bold;
                     cursor: pointer;
+
                     &:after {
                         width: 40%;
                     }
                 }
 
-                &:hover{ &:after {
+                &:hover{ 
+                    
+                    &:after {
                         width: 100%;
                     }
                 }
@@ -76,7 +79,7 @@
                 &__area {
                     resize: none;
                     height: auto;
-                    max-height: 4rem; 
+                    max-height: 5rem; 
                 }
             }
 
@@ -102,6 +105,7 @@
             }
 
             &--check {
+
                 &:after {
                     font-family: 'FontAwesome';
                     content: '\f00c';
@@ -174,6 +178,7 @@
                 }
 
                 &--check {
+                    
                     &:after {
                         content: none;
                     }

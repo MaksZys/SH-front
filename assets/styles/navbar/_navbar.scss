@@ -35,45 +35,58 @@
         margin: 0;
         height: 5em;
         margin-top: 1em;
+
         &__list-element {
             margin-left: 2em;
+
             &--small-font {
                 font-size: 13px;
             }
+
             &--big-font {
                 font-size: 17px;
             }
+
             &--big-btn-shape {
                 padding: 47px 78px 20px 115px;
                 white-space: nowrap;
             }
+
             &--small-btn-shape {
                 padding: 47px 35px 20px 35px;
                 white-space: nowrap;
             }
+
             &--btn-position {
                 position: relative;
                 right: 4rem;
             }
+
             &--blue {
                 background-color: $productColor;
             }
+
             &--del-decorations {
                 text-decoration: none;
                 color: black;
             }
+
             &--del-decorations-white {
                 text-decoration: none;
                 color: $white;
             }
+
             &--additional-margin {
                 margin: 0 0rem 0 4rem;
             }
+
             &--delete-margin {
                 margin: 0;
             }
+
             @include add-arrow;
-        }        
+        }
+
         &--mobile {
             display: flex;
         }
@@ -86,13 +99,16 @@
     display: flex;
     padding-left: 17%;
     display: inline-flex;
+
     &__list {
+        
         &__element {
             display: inline-flex;
             list-style: none;
             font-size: 19px;
             line-height: 27px;
             margin: 0.5em 1.4em 0 1.4em;   
+
             &:after{
                 position: absolute;
                 content: '';
@@ -104,16 +120,20 @@
                 display: block;
                 transition: width 0.2s ease-in-out;
             }
+
             &:hover, &--selected {
                 text-decoration: none;
                 position: relative;
                 font-weight: bold;
                 cursor: pointer;
+
                 &:after {
                     width: 40%;
                 }
             }
-            &:hover{ &:after {
+            &:hover{ 
+                
+                &:after {
                     width: 100%;
                 }
             }
@@ -126,6 +146,7 @@
             margin: 0.5em 1.4em 0 1.4em;  
         }
     }
+
     &--mobile {
         display: none;
     }
@@ -140,6 +161,7 @@
         display: inline-flex;
         width: 100%;
     }
+
     .menu-up {
         position: relative;
         top: 0;
@@ -158,13 +180,16 @@
         margin: 0;
         display: flex;
         justify-content: center;
+
         &__list {
             padding: 0;
+
             &__element{
                 margin: 0;
                 padding: 0;
                 display: none;
             }
+
             &__title {
                 display: none;
             }
@@ -176,10 +201,12 @@
         position: relative;
         top: 1em;
         right: 1em;
+
         &__burger {
             display: block;
             width: 3em;
             margin: 0.8em 0.5em 0 0;
+
             &__line {
                 width: 35px;
                 height: 3px;

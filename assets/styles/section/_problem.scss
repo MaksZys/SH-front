@@ -3,32 +3,39 @@
     &__wrapper {
         padding-top: 15em;
         overflow: hidden;
+
         &__container {
             width: 70%;
             padding-left: 15%;
             display: inline-flex;
         }
+
         &__section-name{
             @include section-name;
         }
     }
+
     &__dots-wrapper {
         display: none;
     }
 }
 
 .problem-container {
+
     &__column {
         background-color: $white;
         padding: 60px;
         display: grid;
         margin: 1em;
+
         &__image {
             margin: 0 auto;
         }
+
         &__title {
 
         }
+
         &__text {
 
         }
@@ -37,13 +44,16 @@
 
 @media (max-width: $query-mobile) {
     .problem {
+
         &__wrapper {
             padding-top: 3rem;
+
             &__container {
                 background-color: $white;
                 width: 100%;
                 padding-left: 0; 
             }
+
             &__section-name {
                 @include mobile-section-name;
             }
@@ -52,6 +62,7 @@
             @include dots-center-wrapper;
             background-color: $white;
             margin-bottom: 1rem;
+
             &__dot{
                 @include dots;
             }
@@ -59,19 +70,24 @@
     }
 
     .problem-container {
+
         &__column {
             width: 100%;
             display: none;
             padding: 30px;
+
             &--selected {
                 display: grid;
             }  
+
             &__image {
 
             }
+
             &__title {
 
             }
+            
             &__text {
 
             }

@@ -21,6 +21,7 @@
     border-radius: 50%;
     display: inline-block;
     margin: 1rem 1% 0 1%;
+    
     &--selected {
         background-color: $productColor;
     }
@@ -28,6 +29,7 @@
 
 @mixin add-arrow {
     &--add-arrow {
+
         &:after {
             margin-left: 1rem;
             font-family: 'FontAwesome';

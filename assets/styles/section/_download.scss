@@ -16,6 +16,7 @@
         ". from picture";
     grid-gap: 5px;
     overflow: hidden;
+
     &__title {
         grid-area: title;
         font-family: 'Poppins';
@@ -32,6 +33,7 @@
         background: url("./assets/images/desks.png") no-repeat;
         background-size: inherit;
         margin-left: 3rem;
+
         &__image {
             position: relative;
             right: -12%;
@@ -43,7 +45,6 @@
         grid-area: text;
         font-size: 30px;
         line-height: 40px;
-        // padding: 0.5rem 5rem 2rem 1rem;
         text-align: left;
     }
 
@@ -52,8 +53,10 @@
         display: inline-flex;
         justify-content: left;
         align-self: flex-end;
+
         &__canvas {
             margin: 1rem;
+
             &__picture {
             }
         }
@@ -99,8 +102,10 @@
             padding: 0;
             display: inline-flex;
             justify-content: center;
+
             &__canvas {
                 margin: 1rem;
+                
                 &__picture {
                     width: 100%;
                 }
